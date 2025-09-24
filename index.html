@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yokai Manga Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menü</h2>
+        <ul>
+            <li><a href="#">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#">Naruto ▾</a>
+                <ul class="submenu">
+                    <li><a href="#naruto1">Bölüm 1</a></li>
+                    <li><a href="#naruto2">Bölüm 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Bleach ▾</a>
+                <ul class="submenu">
+                    <li><a href="#bleach1">Bölüm 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Yokai Manga Sitesi</h1>
+
+        <section id="naruto1">
+            <h2>Naruto Bölüm 1</h2>
+            <img src="images/naruto1.jpg" alt="Naruto 01">
+            <img src="images/naruto2.jpg" alt="Naruto 02">
+        </section>
+
+        <section id="naruto2">
+            <h2>Naruto Bölüm 2</h2>
+            <img src="images/naruto3.jpg" alt="Naruto 03">
+            <img src="images/naruto4.jpg" alt="Naruto 04">
+        </section>
+
+        <section id="bleach1">
+            <h2>Bleach Bölüm 1</h2>
+            <img src="images/bleach1.jpg" alt="Bleach 01">
+            <img src="images/bleach2.jpg" alt="Bleach 02">
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
