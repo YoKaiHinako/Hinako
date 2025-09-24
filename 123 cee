@@ -1,0 +1,37 @@
+/mangasite/
+├─ index.html           <-- Ana sayfa
+├─ style.css            <-- Tasarım dosyası
+├─ /manga/
+│   ├─ naruto/
+│   │   ├─ 01.jpg
+│   │   ├─ 02.jpg
+│   │   └─ 03.jpg
+│   └─ bleach/
+│       ├─ 01.jpg
+│       └─ 02.jpg
+└─ /js/
+    └─ script.js        <-- İleri/geri sayfa kontrolü için (opsiyonel)
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Manga Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Manga Sitesi</h1>
+    <h2>Naruto Bölüm 1</h2>
+    <img src="manga/naruto/01.jpg" alt="Naruto Bölüm 1">
+    <img src="manga/naruto/02.jpg" alt="Naruto Bölüm 1">
+</body>
+</html>
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f5f5f5;
+}
+
+img {
+    max-width: 90%;
+    margin: 10px 0;
+}
