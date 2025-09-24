@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yokai Manga Sitesi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Menü</h2>
+        <ul>
+            <li><a href="#">Ana Sayfa</a></li>
+            <li class="dropdown">
+                <a href="#">Naruto ▾</a>
+                <ul class="submenu">
+                    <li><a href="#naruto1">Bölüm 1</a></li>
+                    <li><a href="#naruto2">Bölüm 2</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href="#">Bleach ▾</a>
+                <ul class="submenu">
+                    <li><a href="#bleach1">Bölüm 1</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1>Yokai Manga Sitesi</h1>
+
+        <section id="naruto1">
+            <h2>Naruto Bölüm 1</h2>
+            <img src="images/naruto1.jpg" alt="Naruto 01">
+            <img src="images/naruto2.jpg" alt="Naruto 02">
+        </section>
+
+        <section id="naruto2">
+            <h2>Naruto Bölüm 2</h2>
+            <img src="images/naruto3.jpg" alt="Naruto 03">
+            <img src="images/naruto4.jpg" alt="Naruto 04">
+        </section>
+
+        <section id="bleach1">
+            <h2>Bleach Bölüm 1</h2>
+            <img src="images/bleach1.jpg" alt="Bleach 01">
+            <img src="images/bleach2.jpg" alt="Bleach 02">
+        </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #000000;
+    color: #ff66cc;
+    display: flex;
+}
+
+a {
+    color: #ff66cc;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ff99dd;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 220px;
+    background-color: #111;
+    height: 100vh;
+    padding: 20px;
+    position: fixed;
+    overflow-y: auto;
+}
+
+.sidebar h2 {
+    color: #ff66cc;
+    margin-bottom: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 10px 0;
+    position: relative;
+}
+
+/* Dropdown Menü */
+.dropdown:hover .submenu {
+    display: block;
+}
+
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+}
+
+.submenu li {
+    margin: 5px 0;
+}
+
+/* İçerik */
+.content {
+    margin-left: 240px;
+    padding: 20px;
+    width: calc(100% - 240px);
+}
+
+h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    margin-top: 30px;
+}
+
+/* Manga Görselleri */
+section img {
+    max-width: 90%;
+    margin: 10px 0;
+    display: block;
+}
+
+/* Hover efekti */
+img:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s;
+}
+console.log("Yokai Manga Sitesi - Tek Sayfa Hazır!");
+/mangasite/
+├─ index.html
+├─ style.css
+├─ /js/script.js
+└─ /images/
+    ├─ naruto1.jpg
+    ├─ naruto2.jpg
+    ├─ naruto3.jpg
+    ├─ naruto4.jpg
+    ├─ bleach1.jpg
+    └─ bleach2.jpg
