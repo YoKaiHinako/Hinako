@@ -3,7 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <title>Yokai Manga Sitesi</title>
+    <meta name="description" content="Yokai temalı manga okuma sitesi. Naruto, Bleach ve daha fazlası.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+
+    <!-- Google Font (Japon stilinde) -->
+    <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="sidebar">
@@ -11,10 +16,10 @@
         <ul>
             <li><a href="#">Ana Sayfa</a></li>
             <li class="dropdown">
-                <a href="#">Naruto ▾</a>
+                <a href="#">Like Wind on a Dry Branch ▾</a>
                 <ul class="submenu">
-                    <li><a href="#naruto1">Bölüm 1</a></li>
-                    <li><a href="#naruto2">Bölüm 2</a></li>
+                    <li><a href="#Like Wind on a Dry Branch">Bölüm 1</a></li>
+                    <li><a href="#Like Wind on a Dry Branch">Bölüm 2</a></li>
                 </ul>
             </li>
             <li class="dropdown">
@@ -29,24 +34,38 @@
     <div class="content">
         <h1>Yokai Manga Sitesi</h1>
 
-        <section id="naruto1">
+        <section id="naruto1" class="chapter">
             <h2>Naruto Bölüm 1</h2>
             <img src="images/naruto1.jpg" alt="Naruto 01">
             <img src="images/naruto2.jpg" alt="Naruto 02">
+            <div class="nav-buttons">
+                <a href="#naruto2" class="next">Sonraki Bölüm ➝</a>
+            </div>
         </section>
 
-        <section id="naruto2">
+        <section id="naruto2" class="chapter">
             <h2>Naruto Bölüm 2</h2>
             <img src="images/naruto3.jpg" alt="Naruto 03">
             <img src="images/naruto4.jpg" alt="Naruto 04">
+            <div class="nav-buttons">
+                <a href="#naruto1" class="prev">⟵ Önceki Bölüm</a>
+                <a href="#bleach1" class="next">Sonraki Bölüm ➝</a>
+            </div>
         </section>
 
-        <section id="bleach1">
+        <section id="bleach1" class="chapter">
             <h2>Bleach Bölüm 1</h2>
             <img src="images/bleach1.jpg" alt="Bleach 01">
             <img src="images/bleach2.jpg" alt="Bleach 02">
+            <div class="nav-buttons">
+                <a href="#naruto2" class="prev">⟵ Önceki Bölüm</a>
+            </div>
         </section>
     </div>
+
+    <footer>
+        <p>© 2025 Yokai Manga Sitesi | Tüm hakları saklıdır. | İçerikler telif sahiplerine aittir.</p>
+    </footer>
 
     <script src="js/script.js"></script>
 </body>
