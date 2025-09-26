@@ -117,3 +117,30 @@ footer {
         width: 100%;
     }
 }
+.cover {
+    width: 250px;   /* genişlik */
+    height: auto;   /* oranı koru */
+    border-radius: 8px; /* köşeleri yuvarlat */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5); /* hafif gölge */
+    margin-bottom: 10px;
+}
+
+.series {
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.details-btn {
+    display: inline-block;
+    padding: 8px 12px;
+    background: #ff4fa1;
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background: #ff79c6;
+}
