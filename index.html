@@ -9,26 +9,101 @@
 
     <!-- Google Font (Japon stilinde) -->
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Kaisei Decol', serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 220px;
+            background: #222;
+            color: #fff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 10px 0;
+        }
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .content {
+            flex: 1;
+            padding: 20px;
+        }
+        .series {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        .series img.cover {
+            width: 250px;
+            height: auto;
+            border-radius: 8px;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+        .series button {
+            padding: 8px 16px;
+            font-size: 14px;
+            border: none;
+            background: #444;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .series button:hover {
+            background: #666;
+        }
+        .chapters {
+            margin: 20px auto;
+            max-width: 400px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            background: #f9f9f9;
+        }
+        .chapters ul {
+            list-style: none;
+            padding: 0;
+        }
+        .chapters ul li {
+            margin: 8px 0;
+        }
+        .chapters ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #222;
+            color: #fff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
 </head>
 <body>
     <div class="sidebar">
         <h2>Menü</h2>
         <ul>
             <li><a href="#">Ana Sayfa</a></li>
-            <li class="dropdown">
-                <a href="#">Like Wind on a Dry Branch ▾</a>
-                <ul class="submenu">
-                    <li><a href="#like-wind-1">Bölüm 1</a></li>
-                    <li><a href="#like-wind-2">Bölüm 2</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#">Life is Strange Volume 1: Dust ▾</a>
-                <ul class="submenu">
-                    <li><a href="#lis-1">Bölüm 1</a></li>
-                    <li><a href="#lis-2">Bölüm 2</a></li>
-                </ul>
-            </li>
+            <li><a href="#like-wind">Like Wind on a Dry Branch</a></li>
+            <li><a href="#necromancer">The Lone Necromancer</a></li>
+            <li><a href="#lis">Life is Strange</a></li>
         </ul>
     </div>
 
@@ -36,55 +111,65 @@
         <h1>Yokai Manga Sitesi</h1>
 
         <!-- Like Wind on a Dry Branch -->
-        <section id="like-wind-1" class="chapter">
+        <div class="series">
             <h2>Like Wind on a Dry Branch</h2>
-            <!-- Kapak fotoğrafı -->
-            <img src="https://rawkuma.net/wp-content/uploads/2022/03/Like-Wind-on-a-Dry-Branch.jpg" />
-             <div class="nav-buttons">
-                <a href="#like-wind-2" class="next">Sonraki Bölüm ➝</a>
-            </div>
-        </section>
+            <img src="https://rawkuma.net/wp-content/uploads/2022/03/Like-Wind-on-a-Dry-Branch.jpg" 
+                 alt="Like Wind on a Dry Branch" class="cover">
+            <button onclick="toggleChapters('like-wind')">Detaylar</button>
+        </div>
 
-        <section id="like-wind-2" class="chapter">
-            <h2>Like Wind on a Dry Branch - Bölüm 2</h2>
-            <p></p>
-            <div class="nav-buttons">
-                <a href="#like-wind-1" class="prev">⟵ Önceki Bölüm</a>
-            </div>
-        </section>
-
-        <!-- Life is Strange -->
-        <section id="lis-1" class="chapter">
-            <h2>Life is Strange Volume 1: Dust - Bölüm 1</h2>
-            <img src="images/naruto3.jpg" alt="Life is Strange Bölüm 1">
-            <div class="nav-buttons">
-                <a href="#lis-2" class="next">Sonraki Bölüm ➝</a>
-            </div>
-        </section>
-
-        <section id="lis-2" class="chapter">
-            <h2>Life is Strange Volume 1: Dust - Bölüm 2</h2>
-            <img src="images/naruto4.jpg" alt="Life is Strange Bölüm 2">
-            <div class="nav-buttons">
-                <a href="#lis-1" class="prev">⟵ Önceki Bölüm</a>
-                <a href="#bleach1" class="next">Sonraki Bölüm ➝</a>
-            </div>
-        </section>
+        <div id="like-wind" class="chapters" style="display:none;">
+            <h3>Bölümler</h3>
+            <ul>
+                <li><a href="#like-wind-1">Bölüm 1</a></li>
+                <li><a href="#like-wind-2">Bölüm 2</a></li>
+            </ul>
+        </div>
 
         <!-- The Lone Necromancer -->
-        <section id="The Lone Necromancer" class="chapter">
-            <h2>The Lone Necromancer Bölüm 1</h2>
-            <img src="https://rawkuma.net/wp-content/uploads/2022/02/The-Lone-Necromancer.jpg" alt="Bölüm-1" />
-            <div class="nav-buttons">
-                <a href="#lis-2" class="prev">⟵ Önceki Bölüm</a>
-            </div>
-        </section>
+        <div class="series">
+            <h2>The Lone Necromancer</h2>
+            <img src="https://rawkuma.net/wp-content/uploads/2022/02/The-Lone-Necromancer.jpg" 
+                 alt="The Lone Necromancer" class="cover">
+            <button onclick="toggleChapters('necromancer')">Detaylar</button>
+        </div>
+
+        <div id="necromancer" class="chapters" style="display:none;">
+            <h3>Bölümler</h3>
+            <ul>
+                <li><a href="#The-Lone-Necromancer-1">Bölüm 1</a></li>
+            </ul>
+        </div>
+
+        <!-- Life is Strange -->
+        <div class="series">
+            <h2>Life is Strange Volume 1: Dust</h2>
+            <img src="images/naruto3.jpg" alt="Life is Strange" class="cover">
+            <button onclick="toggleChapters('lis')">Detaylar</button>
+        </div>
+
+        <div id="lis" class="chapters" style="display:none;">
+            <h3>Bölümler</h3>
+            <ul>
+                <li><a href="#lis-1">Bölüm 1</a></li>
+                <li><a href="#lis-2">Bölüm 2</a></li>
+            </ul>
+        </div>
     </div>
 
     <footer>
         <p>© 2025 Yokai Manga Sitesi | Tüm hakları saklıdır. | İçerikler telif sahiplerine aittir.</p>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script>
+    function toggleChapters(id) {
+        var el = document.getElementById(id);
+        if (el.style.display === "none") {
+            el.style.display = "block";
+        } else {
+            el.style.display = "none";
+        }
+    }
+    </script>
 </body>
 </html>
