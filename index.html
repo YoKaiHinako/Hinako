@@ -9,6 +9,30 @@
 
     <!-- Google Font (Japon stilinde) -->
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        /* Bölümleri varsayılan gizle */
+        .chapter {
+            display: none;
+            margin-top: 15px;
+        }
+        /* Açıldığında görünsün */
+        .chapter.active {
+            display: block;
+        }
+        .detail-button {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #444;
+            color: #fff;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .detail-button:hover {
+            background: #666;
+        }
+    </style>
 </head>
 <body>
     <!-- Sidebar -->
@@ -47,60 +71,64 @@
         <section id="like-wind-cover" class="cover-section">
             <h2>Like Wind on a Dry Branch</h2>
             <img src="https://rawkuma.net/wp-content/uploads/2022/03/Like-Wind-on-a-Dry-Branch.jpg" alt="Like Wind on a Dry Branch Kapak" class="cover">
-            <a href="#like-wind-1" class="detail-button">Detaylar</a>
+            <a href="#" class="detail-button" data-target="like-wind-chapters">Detaylar</a>
 
-            <!-- Bölümler -->
-            <section id="like-wind-1" class="chapter">
-                <h2>Like Wind on a Dry Branch - Bölüm 1</h2>
-                <img src="images/likewind1.jpg" alt="Like Wind Bölüm 1">
-                <div class="nav-buttons">
-                    <a href="#like-wind-2" class="next">Sonraki Bölüm ➝</a>
-                </div>
-            </section>
+            <div id="like-wind-chapters">
+                <section id="like-wind-1" class="chapter">
+                    <h2>Like Wind on a Dry Branch - Bölüm 1</h2>
+                    <img src="images/likewind1.jpg" alt="Like Wind Bölüm 1">
+                    <div class="nav-buttons">
+                        <a href="#like-wind-2" class="next">Sonraki Bölüm ➝</a>
+                    </div>
+                </section>
 
-            <section id="like-wind-2" class="chapter">
-                <h2>Like Wind on a Dry Branch - Bölüm 2</h2>
-                <img src="images/likewind2.jpg" alt="Like Wind Bölüm 2">
-                <div class="nav-buttons">
-                    <a href="#like-wind-1" class="prev">⟵ Önceki Bölüm</a>
-                </div>
-            </section>
+                <section id="like-wind-2" class="chapter">
+                    <h2>Like Wind on a Dry Branch - Bölüm 2</h2>
+                    <img src="images/likewind2.jpg" alt="Like Wind Bölüm 2">
+                    <div class="nav-buttons">
+                        <a href="#like-wind-1" class="prev">⟵ Önceki Bölüm</a>
+                    </div>
+                </section>
+            </div>
         </section>
 
         <!-- Life is Strange -->
         <section id="lis-cover" class="cover-section">
             <h2>Life is Strange Volume 1: Dust</h2>
             <img src="https://m.media-amazon.com/images/I/81vYm29tGyL.jpg" alt="Life is Strange Kapak" class="cover">
-            <a href="#lis-1" class="detail-button">Detaylar</a>
+            <a href="#" class="detail-button" data-target="lis-chapters">Detaylar</a>
 
-            <!-- Bölümler -->
-            <section id="lis-1" class="chapter">
-                <h2>Life is Strange Volume 1: Dust - Bölüm 1</h2>
-                <img src="images/lis1.jpg" alt="Life is Strange Bölüm 1">
-                <div class="nav-buttons">
-                    <a href="#lis-2" class="next">Sonraki Bölüm ➝</a>
-                </div>
-            </section>
+            <div id="lis-chapters">
+                <section id="lis-1" class="chapter">
+                    <h2>Life is Strange Volume 1: Dust - Bölüm 1</h2>
+                    <img src="images/lis1.jpg" alt="Life is Strange Bölüm 1">
+                    <div class="nav-buttons">
+                        <a href="#lis-2" class="next">Sonraki Bölüm ➝</a>
+                    </div>
+                </section>
 
-            <section id="lis-2" class="chapter">
-                <h2>Life is Strange Volume 1: Dust - Bölüm 2</h2>
-                <img src="images/lis2.jpg" alt="Life is Strange Bölüm 2">
-                <div class="nav-buttons">
-                    <a href="#lis-1" class="prev">⟵ Önceki Bölüm</a>
-                </div>
-            </section>
+                <section id="lis-2" class="chapter">
+                    <h2>Life is Strange Volume 1: Dust - Bölüm 2</h2>
+                    <img src="images/lis2.jpg" alt="Life is Strange Bölüm 2">
+                    <div class="nav-buttons">
+                        <a href="#lis-1" class="prev">⟵ Önceki Bölüm</a>
+                    </div>
+                </section>
+            </div>
         </section>
 
         <!-- The Lone Necromancer -->
         <section id="necromancer-cover" class="cover-section">
             <h2>The Lone Necromancer</h2>
             <img src="https://rawkuma.net/wp-content/uploads/2022/02/The-Lone-Necromancer.jpg" alt="The Lone Necromancer Kapak" class="cover">
-            <a href="#necromancer-1" class="detail-button">Detaylar</a>
+            <a href="#" class="detail-button" data-target="necromancer-chapters">Detaylar</a>
 
-            <!-- Bölüm -->
-            <section id="necromancer-1" class="chapter">
-                <h2>The Lone Necromancer - Bölüm 1</h2>
-            </section>
+            <div id="necromancer-chapters">
+                <section id="necromancer-1" class="chapter">
+                    <h2>The Lone Necromancer - Bölüm 1</h2>
+                    <img src="images/necromancer1.jpg" alt="Necromancer Bölüm 1">
+                </section>
+            </div>
         </section>
     </div>
 
@@ -108,5 +136,18 @@
     <footer>
         <p>© 2025 Yokai Manga Sitesi | Tüm hakları saklıdır. | İçerikler telif sahiplerine aittir.</p>
     </footer>
+
+    <!-- JS: Detaylar butonları -->
+    <script>
+        document.querySelectorAll('.detail-button').forEach(button => {
+            button.addEventListener('click', e => {
+                e.preventDefault();
+                const target = document.getElementById(button.dataset.target);
+                if (target) {
+                    target.querySelectorAll('.chapter').forEach(ch => ch.classList.toggle('active'));
+                }
+            });
+        });
+    </script>
 </body>
 </html>
