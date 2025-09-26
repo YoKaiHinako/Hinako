@@ -9,102 +9,157 @@
 
     <!-- Google Font (Japon stilinde) -->
     <link href="https://fonts.googleapis.com/css2?family=Kaisei+Decol:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Kaisei Decol', serif;
+            background: url("https://i.ibb.co/qFqcsz4/arkaplan.jpg") no-repeat center center fixed;
+            background-size: cover;
+            color: #fff;
+        }
+
+        .sidebar {
+            width: 220px;
+            background: rgba(0, 0, 0, 0.8);
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 15px 0;
+        }
+
+        .sidebar ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .content {
+            margin-left: 240px;
+            padding: 20px;
+        }
+
+        .cover {
+            width: 250px;
+            border-radius: 8px;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .details-btn {
+            background: #e63946;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 6px;
+            text-decoration: none;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .chapter-list {
+            display: none;
+            margin-top: 10px;
+        }
+
+        .chapter-list li {
+            margin: 5px 0;
+        }
+
+        .chapter-list a {
+            color: #ffd166;
+            text-decoration: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            background: rgba(0, 0, 0, 0.6);
+        }
+
+        /* Telefon uyumu */
+        @media (max-width: 768px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+            }
+            .content {
+                margin-left: 0;
+            }
+            .cover {
+                width: 100%;
+                max-width: 300px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <!-- Sidebar -->
     <div class="sidebar">
         <h2>Menü</h2>
         <ul>
             <li><a href="#">Ana Sayfa</a></li>
-            <li class="dropdown">
-                <a href="#like-wind-cover">Like Wind on a Dry Branch ▾</a>
-                <ul class="submenu">
-                    <li><a href="#like-wind-1">Bölüm 1</a></li>
-                    <li><a href="#like-wind-2">Bölüm 2</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#lis-cover">Life is Strange Volume 1: Dust ▾</a>
-                <ul class="submenu">
-                    <li><a href="#lis-1">Bölüm 1</a></li>
-                    <li><a href="#lis-2">Bölüm 2</a></li>
-                </ul>
-            </li>
-            <li class="dropdown">
-                <a href="#necromancer-cover">The Lone Necromancer ▾</a>
-                <ul class="submenu">
-                    <li><a href="#necromancer-1">Bölüm 1</a></li>
-                </ul>
-            </li>
+            <li><a href="#Like-Wind-on-a-Dry-Branch">Like Wind on a Dry Branch</a></li>
+            <li><a href="#Life-is-Strange">Life is Strange</a></li>
         </ul>
     </div>
 
-    <!-- İçerik -->
     <div class="content">
         <h1>Yokai Manga Sitesi</h1>
 
-        <!-- ANASAYFA - Sadece kapaklar -->
-        <section id="like-wind-cover" class="cover-section">
+        <!-- Like Wind on a Dry Branch -->
+        <section id="Like-Wind-on-a-Dry-Branch">
             <h2>Like Wind on a Dry Branch</h2>
-            <img src="https://rawkuma.net/wp-content/uploads/2022/03/Like-Wind-on-a-Dry-Branch.jpg" alt="Like Wind on a Dry Branch Kapak" class="cover">
-            <a href="#like-wind-1" class="detail-button">Detaylar</a>
+            <img src="https://static.wikia.nocookie.net/koreanwebtoons/images/6/6e/Like_Wind_on_a_Dry_Branch.jpg/revision/latest?cb=20210119031845" 
+                 alt="Like Wind on a Dry Branch Kapak" class="cover">
+            <a class="details-btn" onclick="toggleChapters('chapters-likewind')">Detaylara Tıkla →</a>
+            <ul id="chapters-likewind" class="chapter-list">
+                <li><a href="bolum1.html">Bölüm 1</a></li>
+                <li><a href="bolum2.html">Bölüm 2</a></li>
+            </ul>
         </section>
 
-        <section id="lis-cover" class="cover-section">
+        <!-- Life is Strange -->
+        <section id="Life-is-Strange">
             <h2>Life is Strange Volume 1: Dust</h2>
-            <img src="images/lis-cover.jpg" alt="Life is Strange Kapak" class="cover">
-            <a href="#lis-1" class="detail-button">Detaylar</a>
-        </section>
-
-        <section id="necromancer-cover" class="cover-section">
-            <h2>The Lone Necromancer</h2>
-            <img src="https://rawkuma.net/wp-content/uploads/2022/02/The-Lone-Necromancer.jpg" alt="The Lone Necromancer Kapak" class="cover">
-            <a href="#necromancer-1" class="detail-button">Detaylar</a>
-        </section>
-
-
-        <!-- --- BÖLÜM İÇERİKLERİ --- -->
-        <section id="like-wind-1" class="chapter">
-            <h2>Like Wind on a Dry Branch - Bölüm 1</h2>
-            <img src="images/likewind1.jpg" alt="Like Wind Bölüm 1">
-            <div class="nav-buttons">
-                <a href="#like-wind-2" class="next">Sonraki Bölüm ➝</a>
-            </div>
-        </section>
-
-        <section id="like-wind-2" class="chapter">
-            <h2>Like Wind on a Dry Branch - Bölüm 2</h2>
-            <img src="images/likewind2.jpg" alt="Like Wind Bölüm 2">
-            <div class="nav-buttons">
-                <a href="#like-wind-1" class="prev">⟵ Önceki Bölüm</a>
-            </div>
-        </section>
-
-        <section id="lis-1" class="chapter">
-            <h2>Life is Strange Volume 1: Dust - Bölüm 1</h2>
-            <img src="images/lis1.jpg" alt="Life is Strange Bölüm 1">
-            <div class="nav-buttons">
-                <a href="#lis-2" class="next">Sonraki Bölüm ➝</a>
-            </div>
-        </section>
-
-        <section id="lis-2" class="chapter">
-            <h2>Life is Strange Volume 1: Dust - Bölüm 2</h2>
-            <img src="images/lis2.jpg" alt="Life is Strange Bölüm 2">
-            <div class="nav-buttons">
-                <a href="#lis-1" class="prev">⟵ Önceki Bölüm</a>
-            </div>
-        </section>
-
-        <section id="necromancer-1" class="chapter">
-            <h2>The Lone Necromancer - Bölüm 1</h2>
-            <img src="images/necromancer1.jpg" alt="Necromancer Bölüm 1">
+            <img src="https://i.ibb.co/vZ7Z7wD/lifeisstrange.jpg" 
+                 alt="Life is Strange Kapak" class="cover">
+            <a class="details-btn" onclick="toggleChapters('chapters-life')">Detaylara Tıkla →</a>
+            <ul id="chapters-life" class="chapter-list">
+                <li><a href="life1.html">Bölüm 1</a></li>
+                <li><a href="life2.html">Bölüm 2</a></li>
+            </ul>
         </section>
     </div>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 Yokai Manga Sitesi | Tüm hakları saklıdır. | İçerikler telif sahiplerine aittir.</p>
     </footer>
+
+    <script>
+        function toggleChapters(id) {
+            const list = document.getElementById(id);
+            if (list.style.display === "block") {
+                list.style.display = "none";
+            } else {
+                list.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
