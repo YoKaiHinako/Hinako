@@ -14,3 +14,10 @@
         <a href="#The-Lone-Necromancer-1" class="next">Sonraki Bölüm ➝</a>
     </div>
 </section>
+<section id="Life-is-Strange" class="chapter">
+    <h2>Life-is-Strange</h2>
+    <img src="https://m.media-amazon.com/images/I/81vYm29tGyL.jpg" 
+         alt="Life-is-Strange" class="cover">
+    <div class="nav-buttons">
+        <a href="#Life-is-Strange" class="next">Sonraki Bölüm ➝</a>
+ </div>
